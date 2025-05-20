@@ -1,0 +1,1206 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    /* width: fit-content; */
+    scroll-behavior: smooth;
+    font-family: "Exo 2", sans-serif;
+    font-style: normal;
+    background-color: var(--whitesmoke);
+    /* overflow-x: hidden; */
+  }
+  :root {
+    --white: #ffffff;
+    --darkblue: #001d35;
+    --lvblue: #3fbbc0;
+    --black: black;
+    --silver: #555555;
+    --lightsilver:#808080;
+    --whitesmoke: whitesmoke;
+  }
+
+
+  /************************* nav bar **********************/
+.nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--lvblue);
+    color: var(--white);
+    padding: 10px 0;
+   }
+   .nav p{
+    padding-left: 30px;
+   }
+
+   .nav #p1{
+    padding-right: 40px;
+   }
+
+
+  @media screen and (max-width:768px){
+    .nav .nav1 {
+      position: absolute;
+      left: 80px;
+    }
+    .nav .nav2 {
+      position: absolute;
+      right: 80px;
+    } 
+}
+
+  @media screen and (max-width: 320px) {
+    .nav p{
+      display: none;
+    }
+.nav #p1{
+  display: inline;
+ padding-left: 10px;
+}
+} 
+
+
+/************************* / nav bar **********************/
+
+
+/************************* main nav bar **********************/
+ #mainnav {
+  background-color: var(--white);
+  position: sticky;
+  top: 0;
+  height: 80px;
+  z-index: 5;
+}
+
+#menu {
+float: right;
+padding-top: 35px;
+padding-right: 270px;
+}
+.btn {
+  cursor: pointer;
+  float: right;
+  position: absolute;
+  right: 80px;
+  top: 28px;
+  font-weight: 500;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--lvblue);
+}
+#mainnav img {
+  height: 40px;
+  position: absolute;
+  left: 70px;
+  top: 27px;
+}
+#icon{
+  display: none;
+}
+#menu-toggle{
+  display: none;
+}
+#menu a{
+text-decoration: none;
+font-weight:bolder;
+color: var(--silver);
+}
+#menu{
+  display:flex;
+  column-gap: 30px;
+  font-size: small;
+  font-family:Arial, Helvetica, sans-serif;
+}
+#menu a:hover{
+  color: var(--lvblue);
+}
+
+u{
+  display: none;
+}
+@media screen and (max-width:1024px){
+
+  #menu{
+    display: none;
+  }
+#icon{
+  display: inline;
+  position: absolute;
+  left: 650px;
+  top: 28px;
+}
+#icon i{
+  color: var(--black);
+}
+#menu-toggle:checked ~ #menu{
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px; 
+background-color: var(--lvblue);
+color: var(--white);
+border-radius: 10px;
+position: absolute;
+top:50px;
+margin-right: 40px;
+z-index: 5;
+}
+}
+
+
+@media screen and (max-width:768px){
+#menu{
+  display: none;
+}
+#icon{
+  display: inline;
+  position: absolute;
+  left: 420px;
+  top: 28px;
+}
+
+.btn{
+  position: absolute;
+  top: 20px;
+}
+#menu-toggle:checked ~ #menu{
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px; 
+  padding-left: 30px;
+  padding-bottom: 30px;
+  padding-right: 600px;
+background-color: var(--lvblue);
+color: var(--white);
+border-radius: 10px;
+position: absolute;
+top:60px;
+margin: 20px ;
+z-index: 5;
+}
+}
+
+
+@media screen and (max-width: 320px) {
+  #mainnav{
+width:100%;
+  }
+  #mainnav img {
+    position: absolute;
+    left:0;
+    width: 100px;
+  }
+#icon{
+  display: inline;
+  position: relative;
+  bottom: 30px;
+  left:130px;
+}
+  .btn {
+    position: absolute;
+    bottom: 60px;
+    left: 200px;
+    width: 100px;
+    height: 50px;
+  }
+  #menu-toggle:checked ~ #menu{
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px; 
+    padding-right: 50px ;
+    text-align: center;
+  background-color: var(--lvblue);
+  color: var(--white);
+  border-radius: 10px;
+  position: absolute;
+  top:60px;
+  z-index: 5;
+  }
+  } 
+
+/************************* / main nav bar **********************/
+
+
+
+
+/************************* Emergency **********************/
+.body{
+  position: absolute;
+  top: 300px;
+  margin:0 100px;
+  }
+  .home img{
+  height: 500px;
+  }
+  #emergency h1 {
+    color: var(--silver);
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  #emergency p {
+    text-align: center;
+    color: var(--silver);
+    font-size: 20px;
+  }
+  #emergency button {
+    color: var(--white);
+    background-color: var(--lvblue);
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: none;
+    line-height: 20px;
+    margin-top: 40px;
+  }
+  #emergency {
+    height: 250px;
+    align-items:center;
+    text-align:center;
+    background-color: var(--whitesmoke);
+    opacity: 0.9;
+    border-top:30px;
+    border-top:5px solid var(--lvblue);
+  }
+  
+  @media screen and (min-width: 768px) 
+  { #emergency 
+    {
+      position: sticky;
+      top: 0;
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 320px) {
+    .home img{
+      height:720px;
+    }
+  #emergency{
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+  }
+  }  
+/************************* / Emergency **********************/
+
+
+
+/************************* featured service section **********************/
+
+.containerbox{
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  margin-top: 70px;
+  margin-bottom: 50px;
+  margin-left: 110px;
+  margin-right: 110px; 
+  z-index: 1;
+}
+
+.box1,.box2, .box3, .box4{
+  padding: 60px;
+  background-color: var(--white);
+}
+
+#containerboxes .icon{
+  color: var(--lvblue);
+  margin-bottom: 10px;
+  position: relative;
+ right: 60px;
+} 
+
+
+#containerboxes .title {
+  padding-bottom: 10px;
+  color: var(--silver);
+}
+
+#containerboxes .white {
+  color: var(--silver);
+}
+
+ .box1:hover {
+  background-color: var(--lvblue);
+}
+.box2:hover {
+  background-color: var(--lvblue);
+}
+.box3:hover {
+  background-color: var(--lvblue);
+}
+.box4:hover {
+  background-color: var(--lvblue);
+}
+#containerboxes .icon:hover{
+  color: white;
+}
+#containerboxes .title:hover{
+  color: white;
+}
+#containerboxes .white:hover{
+  color: white;
+}
+
+@media screen and (max-width:768px){
+  .containerbox{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+}
+
+@media screen and (max-width: 320px){
+ .containerbox{ 
+  display: grid;
+  grid-template-columns: auto;
+ } 
+} 
+/************************* / featured service section **********************/
+
+
+
+/************************* Emergency section **********************/
+.emergencymain{
+  background-color: var(--lvblue);
+  position: absolute;
+  top: 1010px;
+  width: 100%;
+  height: 310px;
+  text-align: center;
+  color: var(--white);
+}
+.emergencymain #emg{
+  padding: 30px;
+  position: relative;
+  top: 30px;
+}
+
+.emergencymain #hsp{
+  position: relative;
+  top: 40px;
+  align-items: center;
+}
+
+.emergencymain #btn{
+  position: relative;
+top:70px;
+padding: 10px 40px;
+color: var(--white);
+background-color: var(--lvblue);
+border: 2px solid var(--white);
+border-radius: 10px;
+/* font-size: large; */
+}
+.emergencymain #btn:hover{
+  background-color:var(--white);
+  color: var(--lvblue);
+}
+@media screen and (max-width:768px){
+  .emergencymain{
+    position: relative;
+    top: 30px;
+  }
+}
+
+ @media screen and (max-width:320px){
+  .emergencymain{
+    position: relative;
+    top: 25px;
+  }
+  .emergencymain #emg{
+font-size:18px;
+top: 10px;
+  }
+  .emergencymain #hsp{
+    position: relative;
+    bottom: 20px;
+  }
+  .emergencymain #btn{
+    padding-bottom: 10px;
+  }
+} 
+/************************* / Emergency section **********************/
+
+
+
+/*************************  About page **********************/
+.about{
+  margin-top: 400px;
+  margin-left:670px;
+}
+.hr1{
+  margin-left: 680px;
+  margin-right: 740px;
+  border: 2px solid var(--lvblue)
+}
+.para1{
+  margin-left: 450px;
+  margin-top: 40px;
+}
+#whole{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  position: relative;
+  bottom: 60px;
+  margin-left: 120px;
+  margin-right: 80px;
+}
+.title2{
+  margin-left: 30px;
+}
+.para2{
+  margin-top: 10px;
+  margin-left: 30px;
+  color: var(--silver);
+}
+.para3{
+  margin-top: 20px;
+  margin-left: 30px;
+  color: var(--silver);
+}
+ul p{
+  font-size: 18px;
+  color: var(--silver);
+}
+ul i{
+  color: var(--lvblue);
+  margin-left: 30px;
+}
+ul{
+  margin-top: 30px;
+}
+
+@media screen and (max-width:768px){
+  .about{
+    margin-top: 100px;
+    margin-left: 320px;
+  }
+.hr1{
+  margin-left: 380px;
+  width: 50px;
+}
+
+.para1{
+  margin-left: 80px;
+}
+  #whole{
+   display: grid;
+   grid-template-columns:auto;
+   margin-left: 30px;
+   margin-right: 30px;
+  }
+  #whole img{
+    margin-bottom: 30px;
+  }
+
+  @media screen and (max-width:320px){
+.about{
+margin-left:100px;
+}
+.hr1{
+margin-left: 150px;
+width: 50px;
+}
+
+.para1{
+  margin-left: 30px;
+  position: relative;
+  bottom:30px;
+}
+
+#whole{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+  }
+}
+
+/************************* / About page **********************/
+
+
+
+
+/************************* box page **********************/
+
+#numbers{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap:10px;
+}
+.square1,.square2,.square3,.square4{
+  background-color: var(--white);
+  padding: 4px;
+  margin: 0px 30px;
+}
+#numbers i{
+color: var(--lvblue);
+position: relative;
+top: 30px;
+}
+.num{
+padding-left: 100px;
+position: relative;
+bottom: 30px;
+}
+.demo{
+padding-left:100px;
+position: relative;
+bottom: 20px;
+}
+
+@media screen and (max-width:768px){
+  #numbers{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+   margin-left: 20px;
+   margin-right: 20px;
+   gap: 20px;
+  }
+}
+
+@media screen and (max-width:320px){
+  #numbers{
+    display: grid;
+    grid-template-columns: auto;
+  } 
+}
+/************************* / box page **********************/
+
+
+
+
+/************************* Service page **********************/
+
+#service{
+  margin-top: 80px;
+  margin-left: 700px;
+}
+
+.hr2{
+  margin-top: 10px;
+  margin-left: 720px;
+  margin-right:720px;
+  border: 2px solid var(--lvblue)
+}
+#para4{
+  margin-left: 400px;
+  margin-top: 30px;
+}
+
+#multibox i{
+  color: var(--lvblue);
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 50%;
+}
+.para5{
+  margin-top: 20px;
+}
+
+#multibox i:hover{
+  background-color: var(--lvblue);
+  color: var(--white);
+}
+.cardio{
+  margin-top: 30px;
+}
+.cardio:hover{
+  color: var(--lvblue);
+}
+.para5:hover{
+  color: var(--lvblue);
+}
+#multibox{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 60px;
+  padding-top: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+@media screen and (max-width:768px) {
+  #service{
+    margin-left: 350px;
+  }
+  .hr2{
+  margin-left: 380px;
+  width: 50px;
+}
+  #para4{
+    margin-left: 40px;
+  }
+  #multibox{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media screen and (max-width:320px) {
+  #service{
+    margin-left: 100px;
+  }
+  .hr2{
+margin-left: 150px;
+width: 50px;
+}
+  #para4{
+    margin-left: 40px;
+  }
+  #multibox{
+    display: grid;
+    grid-template-columns:auto;
+  }
+}
+
+
+/************************ / Service page **********************/
+
+
+
+
+/************************ Make An Appoinment page **********************/
+
+ #Appointment{
+    background-color: var(--white);
+}
+#heading{
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+.hr3{
+  margin-bottom: 20px;
+  margin-left: 720px;
+  margin-right:720px;
+  border: 2px solid var(--lvblue)
+}
+#heading2{
+  margin-left: 400px;
+}
+/* #Appointment div{
+    padding: 10px;
+} */
+/* #Appointment div>input{
+   padding: 10px;
+} */
+.input{
+    text-align: center;
+    display: grid;
+    margin: 30px;
+    padding: 30px;
+     gap: 30px; 
+}
+.form1{
+  padding: 10px;
+}
+.form2{
+    grid-column: 2;
+}
+.form3{
+    grid-column: 3;
+}
+.form4{
+    grid-row: 2;
+    padding: 10px;
+}
+.form7{
+    grid-column: 1/span 3;
+    grid-row: 3/span 5;
+}
+ .form7{ 
+    columns: 1 /span 3;
+}
+ #btn1{
+ 
+    padding: 15px;
+    margin-left: 700px;
+    margin-bottom: 10px;
+    color: var(--white);
+    background-color: var(--lvblue);
+    border: none;
+    border-radius: 6px;
+}
+
+
+@media screen and (max-width: 320px) {
+    #heading{
+  margin-left: 20px;
+  }
+.hr3{
+ position: relative;
+ right: 180px;
+  width: 50px;
+}
+.form7{
+  width:50px;
+}
+  #heading2{
+    margin-left: 20px;
+  }
+  #btn1{
+    position: absolute;
+    right: 100px;
+  }
+
+  #sevenbox{
+    display: grid;
+    grid-template-columns: auto;
+  }
+    .input{
+     grid-template-columns: repeat(2,1fr);
+    }
+    .form2{
+        grid-row: 2;
+        grid-column: 1;
+    }
+    .form3{
+        grid-row: 3;
+        grid-column: 1;
+    }
+    .form4{
+        grid-row: 4;
+    }
+    .form5{
+        grid-row: 5;
+    }
+    .form6{
+        grid-row: 6;
+    }
+    .form7{
+        grid-row: 7;
+    }
+    .btn1{
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width:768px)
+{
+  #heading{
+    margin-left: 100px;
+}
+.hr3{
+  margin-left: 340px;
+  width: 50px;
+}
+#heading2{
+  margin-left: 80px;
+}
+#sevenbox{
+  display: grid;
+  gap: 10px;
+}
+.can2{
+  grid-column: 2;
+}
+.can3{
+  grid-row: 2;
+  grid-column: 1;
+}
+.can5{
+  grid-row: 3;
+  grid-column: 1;
+}
+.can6{
+  grid-row: 3;
+  grid-column: 2;
+}
+.can7{
+  grid-row: 4;
+  grid-column: 1/span 2;
+}
+
+ .input1{
+  padding: 10px 50px;
+ }
+ .input2{
+  padding: 10px 50px;
+  margin-right: 600px;
+ }
+ .input3{
+  padding: 10px 50px;
+ }
+ .input4{
+  padding: 10px 75px;
+ }
+ .input5{
+  padding:10px 65px;
+ }
+.input6{
+  padding: 10px 80px;
+}
+
+#btn1{
+  margin-left: 300px;
+}
+}
+
+
+
+/************************ / Make An Appoinment page **********************/
+
+
+
+
+/************************  Doctors page **********************/
+
+#doctor1{
+  margin-left:700px;
+  margin-top: 70px;
+}
+.hr4{
+  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-left: 720px;
+  margin-right:720px;
+  border: 2px solid var(--lvblue)
+}
+#doctor2{
+  margin-left: 400px;
+}
+.card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+.card{
+    width: 275px;
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px var(--lightsilver);
+    margin: 10px;
+}
+.card img{
+    width: 100%;
+    height: auto;
+}
+.card-content h2{
+    text-align: center;
+}
+.card-content p{
+  text-align: center;
+}
+
+.icons{
+  display: none;
+}
+.card-container:hover{
+  display:;
+}
+
+
+.icons{
+position: relative;
+bottom: 50px;
+padding-left: 60px;
+}
+.icons i{
+  color: var(--black);
+}
+
+
+
+.doctor1,.doctor2,.doctor3,.doctor4{
+  background-color: var(--white);
+}
+.doctor1{
+  padding-right:50px;
+}
+
+
+@media screen and (max-width:768px){
+  #doctor1{
+    margin-left: 350px;
+  }
+  .hr4{
+  margin-left: 380px;
+  width: 50px;
+}
+  #doctor2{
+    margin-left: 100px;
+  }
+  #doctors{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+
+@media screen and (max-width:320px){
+  #doctor1{
+    margin-left: 100px;
+    margin-top: 200px;
+  }
+  .hr4{
+  margin-left: 130px;
+  width: 50px;
+}
+  #doctor2{
+    margin-left: 50px;
+  }
+  #doctors{
+    display: grid;
+    grid-template-columns:auto;
+  }
+}
+/************************ / Doctors page **********************
+
+
+
+
+/************************ Contact page **********************/
+
+#Contact h1{
+    text-align: center;
+    padding: 10px;
+    margin: 20px;
+    margin-top: 100px;
+}
+.hr5{
+  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-left: 720px;
+  margin-right:720px;
+  border: 2px solid var(--lvblue)
+}
+#Contact .p1{
+    margin-left: 450px;
+    margin-bottom: 20px;
+}
+.grid{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.grid1{
+    padding: 30px;
+    box-shadow: 0px 1px 5px var(--lightsilver);
+    margin: 30px;
+    display: grid;
+}
+.grid1 h3{
+    text-align: center;
+}
+.grid1 p{
+    text-align: center;
+}
+.address{
+    grid-column: 1 / span 2;
+    box-shadow: 0px 1px 5px var(--lightsilver);
+    margin: 30px;
+    padding: 20px;
+}
+.call{
+    grid-column: 1 /span 1;
+    box-shadow: 0px 1px 5px var(--lightsilver);
+    margin: 30px;
+    padding: 20px;
+}
+.email{
+    grid-column: 2;
+    grid-column: 2 /span 1;
+    box-shadow: 0px 1px 5px var(--lightsilver);
+    margin: 30px;
+    padding: 20px;
+}
+.grid2{
+    padding: 30px;
+    display: grid;
+    box-shadow: 0px 1px 5px var(--lightsilver);
+    margin: 30px;
+}
+input{
+    margin: 10px;
+}
+.input1{
+    grid-column: 1/span 1;
+}
+.input2{
+    grid-column: 2;
+    grid-column: 2/ span1;
+}
+.input3{
+    grid-row: 2;
+    grid-column: 1/span 2;
+}
+.input4{
+    grid-row: 3;
+    grid-column: 1/span 2;
+}
+
+@media screen and (max-width: 768px) {
+    .grid2{
+        display: grid;
+        box-shadow: 0px 3px 5px var(--black);
+    }
+    .hr5{
+margin-left: 360px;
+width: 50px;
+}
+.p1{
+position: relative;
+right:200px;
+}
+    input{
+        margin: 10px;
+        padding: 10px;
+    }
+    .input1{
+        grid-column: 1/span 1;
+        width: 550px;
+    }
+    .input2{
+        grid-row: 2;
+        grid-column: 1/ span1;
+        width: 550px;
+    }
+    .input3{
+        grid-row: 3;
+        grid-column: 1/span 1;
+        width: 550px;
+    }
+    .input4{
+        grid-row: 4;
+        grid-column: 1/span 1;
+        width: 520px;
+    }
+    .grid{
+        grid-template-columns: auto;
+    }
+    .grid1{
+      width: 650px;
+    }
+    .grid2{
+      width: 650px;
+    }
+}
+@media screen and (max-width:320px) {
+    .grid{
+        grid-template-columns: auto;
+    }
+    .hr5{
+      margin-left: 130px;
+      width: 50px;
+    }
+    .p1{
+position: relative;
+right:390px;
+width: 200px;
+}
+        .grid1{
+          width: 200px;
+        /* padding: 5px;
+        margin: 30px; */
+    }
+    .grid2{
+      width: 200px;
+    }
+    .address{
+        grid-column: 1 ;
+        box-shadow: 0px 3px 5px var(--black);
+    }
+    .input1{
+      width: 70px;
+    }
+        .input2{
+      width: 70px;
+    }
+      .input3{
+      width: 70px;
+    }
+      .input4{
+      width: 70px;
+    }
+    .call{
+       grid-row:  2;
+        box-shadow: 0px 3px 5px var(--black);
+    }
+    .email{
+        grid-row: 3;
+        grid-column: 1/span 1;
+        box-shadow: 0px 3px 5px var(--black);
+    }
+}
+
+/************************ / Contact page ********************/
+
+
+/************************  Footer Section *******************/
+#footer{
+display: grid;
+grid-template-columns: repeat(5,1fr);
+ margin-top: 100px;
+ margin-left: 70px;
+ margin-right: 70px;
+}
+.foot1,.foot2,.foot3,.foot4,.foot5{
+  display: grid;
+  row-gap: 20px;
+}
+.h2{
+  color: var(--lightsilver);
+}
+.icon{
+  margin-top: 20px;
+  margin-left: 75px;
+  margin-bottom: 35px;
+}
+.icon i{
+  color: var(--lightsilver);
+}
+hr{
+  margin-left: 70px;
+  margin-right:70px;
+  border:1px solid var(--silver);
+}
+
+.apsara{
+  color: var(--lvblue);
+}
+#design{
+  margin-top: 25px;
+  margin-left:15px;
+}
+.division{
+  margin-left:700px;
+  margin-top: 50px;
+}
+
+@media screen and (max-width:768px){
+  #footer{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 40px;
+  }
+
+  .division{
+    margin-left: 250px;
+  }
+}
+
+@media screen and (max-width:320px){
+  #footer{
+    display: grid;
+    grid-template-columns:auto;
+    gap:40px;
+  }
+
+  .division{
+    margin-left: 100px;
+  }
+}
+/************************ /Footer Section *******************/
+
+
+
+
+
+
+
+
+
+

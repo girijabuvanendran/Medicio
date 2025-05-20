@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- Css Link -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Favicons -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    /> -->
+    <link rel="shortcut icon" href="data:image/jpeg;base64,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" type="image/x-icon">
+
+
+    <!-- Font Awesome Icon -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Remix Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+      integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+  <!--------------------------------nav bar-------------------------------------->
+    <div class="nav">
+       <p><i class="ri-time-line"></i>Monday-Saturday, 8AM to 10PM</p>
+        <p id="p1"><i class="ri-smartphone-line"></i>Call us now +1 5589 55488 55</p>
+        </div>
+  <!--------------------------------/ nav bar-------------------------------------->
+
+
+  <!--------------------------------main nav bar-------------------------------------->
+  <div id="mainnav">
+    <img 
+      src="https://bootstrapmade.com/content/demo/Medicio/assets/img/logo.png"
+      alt="logo"
+
+    />
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" id="icon">
+    <i class="ri-menu-line fa-2x"></i></label>
+      <div id="menu">
+      <a href="#HOME" class="active">HOME</a>
+      <a href="#ABOUT">ABOUT</a>
+      <a href="#SERVICE">SERVICE</a>
+      <a href="#DESTIMONIALS">DESTIMONIALS</a>
+      <a href="#DOCTORS">DOCTORS</a>
+      <a href="#CONTACT">CONTACT</a>
+      </div>
+  
+    <a href=""><button class="btn">Make an Appoinment</button></a>
+  </div>
+  <!--------------------------------/ main nav bar-------------------------------------->
+
+
+
+  <!--------------------------------Emergency-------------------------------------->
+  <h1 id="HOME"></h1>
+  <div class="home">
+    <img
+      src="https://bootstrapmade.com/content/demo/Medicio/assets/img/hero-carousel/hero-carousel-1.jpg"
+      height="100%"
+      width="100%"
+      alt=""
+    />
+    <div class="body">
+      <div id="emergency">
+        <h1>Welcome To Medicio</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
+          officiis in rem temporibus tempore ratione unde consequuntur
+          voluptates quam dolorem.
+        </p>
+        <button>Read More</button>
+      </div>
+    </div>
+  </div>
+  <!--------------------------------/ Emergency--------------------------------------->
+
+
+
+  <!--------------------------------featured service section-------------------------------------->
+
+  <div id="containerboxes">
+    <div class="containerbox">
+    <div class="box1">
+      <h1 class="icon"><i class="fas fa-heartbeat icon"></i></h1>
+      <h2 class="title">hospital</h2>
+      <p class="white">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet,
+        dolore.
+      </p>
+    </div>
+    <div class="box2">
+      <h1 class="icon"><i class="fas fa-pills icon"></i></h1>
+      <h2 class="title">hospital</h2>
+      <p class="white">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet,
+        dolore.
+      </p>
+    </div>
+    <div class="box3">
+      <h1 class="icon"><i class="fas fa-thermometer icon"></i></h1>
+      <h2 class="title">hospital</h2>
+      <p class="white">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet,
+        dolore.
+      </p>
+    </div>
+    <div class="box4">
+      <h1 class="icon"><i class="fas fa-dna icon"></i></h1>
+      <h2 class="title">hospital</h2>
+      <p class="white"> 
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet,
+        dolore.
+      </p></div>
+    </div>
+  </div>
+  <!--------------------------------/ featured service section-------------------------------------->
+
+
+
+  <!-------------------------------- Emergency section-------------------------------------->
+
+  <div class="emergencymain">
+    <h1 id="emg">In An Emergency? Need Help Now</h1>
+    <p id="hsp">
+      Henoch-Schönlein Purpura (HSP), a type of vasculitis, and Hereditary
+      Spastic Paraplegia (HSP), a group of inherited neurological disorders.
+      Both are potentially relevant to medical professionals.
+    </p>
+    <button id="btn">Make An Appoinment</button>
+  </div>
+  <!-- ------------------------------/ Emergency section------------------------------------ -->
+
+
+  <!-- ------------------------------ About page------------------------------------ -->
+<h1 id="ABOUT"></h1>
+<h1 class="about">About Us</h1><br>
+<hr class="hr1">
+<p class="para1">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p><br><br><br><br><br><br>
+<div id="whole">
+  <img src="https://bootstrapmade.com/content/demo/Medicio/assets/img/about.jpg" alt="" width="100%">
+  <div class="about1">
+<h1 class="title2">Understanding and Managing Type Two Diabetes</h1>
+<p class="para2">a common chronic condition, affects how your body processes blood sugar. Here's a guide to understanding the condition</p>
+<ul>
+  <p><i class="ri-check-double-fill fa-2x"></i><span id="paragraph">Measuring blood sugar levels through blood tests</span></p>
+  <p><i class="ri-check-double-fill fa-2x"></i><span id="paragraph">Using these measurements to determine the presence or absence</span></p>
+  <p><i class="ri-check-double-fill fa-2x"></i><span id="paragraph">Monitoring blood sugar levels to manage the condition</span></p>
+</ul>
+<p class="para3">specific measurements or values used in diagnosis and management, particularly when discussing blood sugar levels. Some individuals and practitioners believe that applying pressure to certain acupressure points can help manage blood sugar levels, but this is not a scientifically proven method</p>
+<p class="para3">Medical content aims to communicate medical documents, studies and novel findings to HCPs or patients</p>
+</div>
+</div>
+ 
+
+  <!--------------------------------/ About page------------------------------------ -->
+
+
+
+
+  <!--------------------------------box page------------------------------------ -->
+
+
+  <div id="numbers">
+    <div class="square1">
+      <i class="ri-user-heart-fill fa-4x"></i>
+      <h1 class="num">25</h1>
+      <p class="demo">Doctors</p>
+    </div>
+  
+    <div class="square2">
+      <i class="ri-building-fill fa-4x"></i>
+      <h1 class="num">15</h1><p class="demo">Departments</p>
+    </div>
+  
+    <div class="square3">
+      <i class="ri-hourglass-2-fill fa-4x"></i>
+      <h1 class="num">8</h1>
+      <p class="demo">Research Labs</p>
+    </div>
+  
+    <div class="square4">
+      <i class="ri-award-fill fa-4x"></i>
+      <h1 class="num">150</h1>
+      <p class="demo">Awards</p>
+    </div>
+  </div>
+
+  <!--------------------------------/ box page------------------------------------ -->
+
+
+  <!--------------------------------Service page------------------------------------ -->
+<h1 id="SERVICE"></h1>
+<h1 id="service">services</h1>
+<hr class="hr2">
+<p id="para4">At MedicioCare, we offer a wide range of healthcare services designed to meet your every need.</p>
+
+<div id="multibox">
+  <div class="multi1"> 
+  <i class="fa-solid fa-heart-pulse fa-2x"></i>
+  <h2 class="cardio" class="cardio">Cardiology</h2>
+
+  <p class="para5">Comprehensive heart care services from preventive screenings to advanced cardiac treatments led by expert cardiologists.</p>
+  </div>
+  <div class="multi2">
+  <i class="fa-solid fa-capsules fa-2x"></i>
+  <h2 class="cardio">Pharmacy</h2>
+  <p class="para5">In-house pharmacy offering timely access to prescribed medicines with trusted quality and expert guidance.</p>
+  </div>
+  <div class="multi3">
+    <i class="fa-solid fa-building-user fa-2x"></i>
+    <h2 class="cardio">Outpatient Services</h2>
+    <p class="para5">Convenient outpatient consultations across multiple specialties with short wait times and compassionate care.</p>
+  </div>
+  <div class="multi4">
+    <i class="fa-solid fa-dna fa-2x"></i>
+    <h2 class="cardio">Laboratory</h2>
+    <p class="para5">Advanced diagnostic lab providing accurate and quick test results to support your treatment and recovery.</p>
+  </div>
+  <div class="multi5">
+    <i class="fa-solid fa-wheelchair fa-2x"></i>
+    <h2 class="cardio">Physiotherapy</h2>
+    <p class="para5">Customized physical therapy and rehabilitation programs to restore strength, mobility, and well-being.</p>
+  </div>
+  <div class="multi6">
+    <i class="fa-solid fa-book-medical fa-2x"></i>
+    <h2 class="cardio">Health Records</h2>
+    <p class="para5">Secure and organized electronic health records to track your medical history and streamline future care.</p>
+  </div>
+</div>
+  <!--------------------------------/Service page------------------------------------ -->
+
+
+
+  <!-------------------------------- Make An Appoinment page------------------------------------ -->
+    <h1 id="DESTIMONIALS"></h1>
+        <h1 id="heading"> Make An Appointment</h1>
+        <hr class="hr3">
+        <p id="heading2">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <div class="input">
+        <input class="form1" type="text" placeholder="Your name">
+        <input class="form2" type="text" placeholder="Your Email">
+        <input class="form3" type="text" placeholder="Your Phone">
+        <input class="form4" type="date" >
+        <input class="form5" type="text">
+        <input class="form6" type="text">
+        <textarea class="form7" placeholder="message"></textarea>
+       
+        </div>
+        <button id="btn1">make an Appointment</button>
+<!-------------------------------/ Make An Appoinment page------------------------------------ -->
+
+
+
+  <!--------------------------------Doctors page------------------------------------ -->
+ <h1 id="DOCTORS"></h1>
+      
+        <h1 id="doctor1">Doctors</h1>
+        <hr class="hr4">
+        <P id="doctor2">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</P>
+    <div id="Docters">
+    <div class="card-container">
+        <div class="card">
+ <img src="https://bootstrapmade.com/content/demo/Medicio/assets/img/doctors/doctors-1.jpg" alt="" width="260px">
+            <div class="icons">
+<a href=""><i class="fa-brands fa-instagram fa-2x"></i></a>
+<a href=""><i class="fa-brands fa-x-twitter fa-2x"></i></a>
+<a href=""><i class="fa-brands fa-linkedin fa-2x"></i></a>
+<a href=""><i class="fa-brands fa-facebook fa-2x"></i></a>
+</div>
+            <div class="card-content"> 
+                <h2>Walter White</h2>
+                <p>Chief Medical Office</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://bootstrapmade.com/content/demo/Medicio/assets/img/doctors/doctors-2.jpg" alt="" width="260px">
+                        <div class="icons">
+<a href=""><i class="fa-brands fa-instagram fa-2x"></i></a>
+<a href=""><i class="fa-brands fa-x-twitter fa-2x"></i></a>
+<a href=""><i class="fa-brands fa-linkedin fa-2x"></i></a>
+<a href=""><i class="fa-brands fa-facebook fa-2x"></i></a>
+</div>
+            <div class="card-content">
+                <h2>Sarah Jhonson</h2>
+               <p>Anesthesiologist</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://bootstrapmade.com/content/demo/Medicio/assets/img/doctors/doctors-3.jpg" alt="" width="260px">
+            <div class="icons">
+<a href=""><i class="fa-brands fa-instagram fa-2x"></i></a>
+<a href=""><i class="fa-brands fa-x-twitter fa-2x"></i></a>
+<a href=""><i class="fa-brands fa-linkedin fa-2x"></i></a>
+<a href=""><i class="fa-brands fa-facebook fa-2x"></i></a>
+</div>
+            <div class="card-content">
+                <h2>William Anderson</h2>
+                <p>Cardiology</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://bootstrapmade.com/content/demo/Medicio/assets/img/doctors/doctors-4.jpg" alt="" width="260px">
+                        <div class="icons">
+<a href=""><i class="fa-brands fa-instagram fa-2x"></i></a>
+<a href=""><i class="fa-brands fa-x-twitter fa-2x"></i></a>
+<a href=""><i class="fa-brands fa-linkedin fa-2x"></i></a>
+<a href=""><i class="fa-brands fa-facebook fa-2x"></i></a>
+</div>
+            <div class="card-content">
+                <h2>Amanda Jepson</h2>
+                <p>Neurosurgeon</p>
+            </div>
+        </div>
+    </div>  
+  
+
+<!--------------------------------/ Doctors page------------------------------------ -->
+
+
+
+
+<!-------------------------------- Contact page-------------------->
+<h1 id="CONTACT"></h1>
+    <div id="Contact">
+        <h1>Contact</h1>
+        <hr class="hr5">
+        <p class="p1">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d96779.56628236092!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown.%20Conference%20Center!5e0!3m2!1sen!2sus!4v1745317061518!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="grid">
+        <div class="grid1">
+            <div class="address">
+                <h3>address</h3>
+                <p>A108 Adam Street, New York, NY 535022</p>
+            </div>
+            <div class="call">
+                <h3>call us</h3>
+                <p>+1 5589 55488 55</p>
+            </div>
+            <div class="email">
+                <h3>Email us</h3>
+                <p>info@example.com</p>
+            </div>    
+        </div>
+        <div class="grid2">
+            <input class="input1" type="text" placeholder="your name">
+            <input class="input2" type="text" placeholder=" your email">
+            <input class="input3" type="text" placeholder="subject">
+            <textarea class="input4" placeholder="message"></textarea>
+        </div>
+    </div>
+</div>
+
+
+<!--------------------------------/ Contact page------------------------------------ -->
+
+
+
+
+<!--------------------------------/Footer page------------------------------------ -->
+<div id="footer">
+  
+  <div class="foot1">
+    <h2 class="h2">Medicio</h2>
+    <p>123 Health Street</p>
+    <p>Medico City, New York.</p>
+    <p><b>phone:</b>+1 8976 8530</p>
+    <p><b>Email:</b>Contact@medicio.com</p>
+  </div>
+  <div class="foot2">
+    <h2 class="h2">Useful Link</h2>
+    <p>Home</p>
+    <p>About</p>
+    <p>Services</p>
+    <p>Doctors</p>
+    <p>Contact</p>
+  </div>
+  <div class="foot3">
+    <h2 class="h2">Our Services</h2>
+    <p>General Consultation</p>
+    <p>Pharmacy Services</p>
+    <p>Inpatient Care</p>
+    <p>Diagnostic Lab</p>
+    <p>Emergency Support</p>
+  </div>
+  <div class="foot4">
+    <h2 class="h2">Working Hours</h2>
+    <p>Mon - Fri: 8:00 AM - 8:00 PM</p>
+    <p>Saturday: 9:00 AM - 6:00 PM</p>
+    <p>Sunday: 10:00 AM - 4:00 PM</p>
+    <p>Emergency: 24/7</p>
+    <p>Online Support: 24/7</p>
+  </div>
+  <div class="foot5">
+    <h2 class="h2">Stay Informed</h2>
+    <p>Get the latest health insights, expert</p>
+    <p>tips, and Medicio updates directly</p>
+    <p>from our team.</p>
+    <p>Empower your wellness journey with</p>
+    <p>trusted information.</p>
+    <p>Your privacy is our priority.</p>
+</div>
+</div>
+    <div class="icon">
+<a href=""><i class="fa-brands fa-instagram fa-2x"></i></a>
+<a href=""><i class="fa-brands fa-x-twitter fa-2x"></i></a>
+<a href=""><i class="fa-brands fa-linkedin fa-2x"></i></a>
+<a href=""><i class="fa-brands fa-facebook fa-2x"></i></a>
+</div>
+  <hr>
+  <div class="division">
+  <h5>&copy;Copyright <b>Medicio</b>All Rights Reserved</h5>
+  <p id="design">Designed by<span class="apsara"> Girija</span></p>
+</div> 
+
+
+<!--------------------------------/Footer page------------------------------------ -->
+
+
+</body>
+</html>
